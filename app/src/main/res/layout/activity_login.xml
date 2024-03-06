@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:visibility="visible"
+    tools:context=".LoginActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="58dp"
+        android:background="#5277E8"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/text_view_id"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="로그인"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF"
+            android:textSize="34sp" />
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/login_progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:visibility="gone" />
+
+    <ScrollView
+        android:id="@+id/login_form"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
+
+
+        <LinearLayout
+            android:id="@+id/email_login_form"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:orientation="vertical">
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <AutoCompleteTextView
+                    android:id="@+id/login_email"
+                    style="@style/Widget.AppCompat.AutoCompleteTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="43dp"
+                    android:hint="이메일을 입력하세요."
+                    android:inputType="textEmailAddress"
+
+                    android:paddingLeft="13dp"
+                    android:singleLine="true" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <AutoCompleteTextView
+                    android:id="@+id/login_password"
+                    style="@style/Widget.AppCompat.AutoCompleteTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="43dp"
+                    android:hint="비밀번호를 입력하세요."
+
+
+                    android:inputType="textPassword"
+                    android:paddingLeft="13dp"
+                    android:singleLine="true" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <Button
+                android:id="@+id/login_button"
+                style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:backgroundTint="#5277E8"
+                android:onClick="attemptLogin"
+                android:text="로그인"
+                android:textStyle="bold" />
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/searchid"
+                    style="@style/Widget.Material3.Button.TextButton.Dialog"
+                    android:layout_width="107dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center|center_horizontal"
+                    android:text="아이디 찾기" />
+
+                <Button
+                    android:id="@+id/searchpwd"
+                    style="@style/Widget.Material3.Button.TextButton.Dialog"
+                    android:layout_width="107dp"
+                    android:layout_height="wrap_content"
+                    android:text="비밀번호 찾기" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/join_button"
+                style="@style/Widget.Material3.Button.TextButton.Dialog"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_marginTop="5dp"
+                android:insetLeft="0dp"
+                android:text="계정이 없으신가요?"
+                android:textStyle="bold" />
+
+
+        </LinearLayout>
+
+    </ScrollView>
+</FrameLayout>
